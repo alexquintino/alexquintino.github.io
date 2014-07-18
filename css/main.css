@@ -17,3 +17,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+.banner h1 {
+  font-family: 'Raleway', sans-serif;
+}
