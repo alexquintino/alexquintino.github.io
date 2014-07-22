@@ -11,16 +11,31 @@ html, body {
   height: 100%;
 }
 
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: 'Raleway', sans-serif;
+}
+
 main {
   height: 100%;
 }
 
 .banner {
+  width: 100%;
+
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  h1 {
-  font-family: 'Raleway', sans-serif;
+  img {
+    float: right;
+    max-width: 75%;
+    min-width: 25%;
+  }
+
+  .text {
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: left;
+    font-size: 2em;
   }
 }
