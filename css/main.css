@@ -13,26 +13,39 @@ html, button, input, select, textarea,
     font-family: 'Raleway', sans-serif;
 }
 
+header {
+  position: absolute;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 1em;
+}
+
+header nav ul {
+  margin: 0;
+  text-align: right;
+  padding-right: 40px;
+}
+
 main {
+  display: table;
   height: 100%;
+  padding: 3em 0;
+  margin: 0 4em;
 }
 
 .banner {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.banner img {
-  float: right;
-  max-width: 75%;
-  min-width: 25%;
+.banner .img {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .banner .text {
-  margin-left: 3%;
-  margin-right: 3%;
-  text-align: left;
+  padding-left: 1em;
   font-size: 2em;
+  display: table-cell;
+  vertical-align: middle;
 }
