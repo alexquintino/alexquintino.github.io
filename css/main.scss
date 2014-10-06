@@ -1,3 +1,9 @@
+---
+---
+
+$content-margin: 0 4em;
+$content-padding: 3em 0;
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -18,34 +24,35 @@ header {
   width: 100%;
   margin: 1em 0;
   font-size: 1em;
+
+  nav ul {
+    margin: 0;
+    text-align: right;
+    padding-right: 40px;
+  }
 }
 
-header nav ul {
-  margin: 0;
-  text-align: right;
-  padding-right: 40px;
-}
 
 main {
   display: table;
   height: 100%;
-  padding: 3em 0;
-  margin: 0 4em;
+  padding: $content-padding;
+  margin: $content-margin;
 }
 
 .banner {
   display: table-cell;
   vertical-align: middle;
-}
 
-.banner .img {
-  display: table-cell;
-  vertical-align: middle;
-}
+  .img {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
-.banner .text {
-  padding-left: 1em;
-  font-size: 2em;
-  display: table-cell;
-  vertical-align: middle;
+  .text {
+    padding-left: 1em;
+    font-size: 2em;
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
