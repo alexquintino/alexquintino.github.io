@@ -32,27 +32,51 @@ header {
   }
 }
 
-
 main {
-  display: table;
-  height: 100%;
   padding: $content-padding;
   margin: $content-margin;
 }
 
-.banner {
-  display: table-cell;
-  vertical-align: middle;
+.landing {
+  display: table;
+  height: 100%;
+  .banner {
+    display: table-cell;
+    vertical-align: middle;
 
-  .img {
+    .img {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .text {
+      padding-left: 1em;
+      font-size: 2em;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.about-me {
+  display: table;
+  height: 100%;
+
+  .img, .copy {
     display: table-cell;
     vertical-align: middle;
   }
 
-  .text {
+  .copy {
     padding-left: 1em;
     font-size: 2em;
-    display: table-cell;
-    vertical-align: middle;
+
+    p {
+      margin: 0;
+    }
+
+    div {
+      margin-bottom: 1em;
+    }
   }
 }
