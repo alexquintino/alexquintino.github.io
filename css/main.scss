@@ -3,6 +3,7 @@
 
 $content-margin: 0 4em;
 $content-padding: 3em 0;
+$text-color: #2A363B;
 
 * {
     -webkit-box-sizing: border-box;
@@ -35,6 +36,11 @@ header {
 main {
   padding: $content-padding;
   margin: $content-margin;
+  color: $text-color
+}
+
+a {
+  text-decoration: none;
 }
 
 .landing {
