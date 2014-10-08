@@ -1,0 +1,12 @@
+<header>
+  <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul>
+      {% if page.page != "home" %}
+        <li><a href="/"> Home</a></li>
+      {% endif %}
+      {% if page.page != "about" %}
+        <li><a href="/about">About Me</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</header>
