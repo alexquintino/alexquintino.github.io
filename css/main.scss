@@ -1,0 +1,89 @@
+---
+---
+
+$content-margin: 0 4em;
+$content-padding: 3em 0;
+$text-color: #2A363B;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  text-transform: lowercase;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 1em;
+
+  nav {
+    margin: 0;
+    text-align: right;
+    padding-right: 40px;
+  }
+}
+
+main {
+  padding: $content-padding;
+  margin: $content-margin;
+  color: $text-color
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing {
+  display: table;
+  height: 100%;
+  .banner {
+    display: table-cell;
+    vertical-align: middle;
+
+    .img {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .text {
+      padding-left: 1em;
+      font-size: 2em;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.about-me {
+  display: table;
+  height: 100%;
+
+  .img, .copy {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .copy {
+    padding-left: 1em;
+    font-size: 2em;
+
+    p {
+      margin: 0;
+    }
+
+    div {
+      margin-bottom: 1em;
+    }
+  }
+}
