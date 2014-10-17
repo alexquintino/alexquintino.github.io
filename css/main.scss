@@ -4,6 +4,7 @@
 $content-margin: 0 4em;
 $content-padding: 3em 0;
 $text-color: #2A363B;
+$duration-color: lightgray;
 
 * {
     -webkit-box-sizing: border-box;
@@ -46,6 +47,7 @@ a {
 .landing {
   display: table;
   height: 100%;
+
   .banner {
     display: table-cell;
     vertical-align: middle;
@@ -83,6 +85,49 @@ a {
 
     div {
       margin-bottom: 1em;
+    }
+  }
+}
+
+.work {
+
+  font-size: 1.5em;
+
+  .timeline h3, .title {
+    margin-top: 0;
+  }
+
+  .timeline {
+    font-size: 0.8em;
+    text-align: right;
+    padding-top: 0.5em;
+  }
+
+  .copy {
+    padding-left: 2em;
+  }
+
+  .duration {
+    font-size: 0.5em;
+    color: $duration-color;
+    padding-left: 0.5em;
+    vertical-align: middle;
+  }
+
+  .task {
+    border-width: 0 0 0 0.1em;
+    border-style: solid;
+
+    p {
+      margin: 0.5em 0;
+      padding-left: 0.3em;
+    }
+  }
+
+  .stack {
+    p {
+      text-align: right;
+      margin: 0;
     }
   }
 }
