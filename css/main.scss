@@ -3,6 +3,7 @@
 
 $content-margin: 0 4em;
 $content-padding: 3em 0;
+$header-footer-margin: 0 2em;
 $text-color: #2A363B;
 $duration-color: lightgray;
 
@@ -31,6 +32,33 @@ header {
     margin: 0;
     text-align: right;
     padding-right: 40px;
+  }
+}
+
+footer {
+  margin: $header-footer-margin;
+
+  .social-links, .email {
+    margin: 1em 0;
+  }
+
+  .social-links ul {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    list-style-type: none;
+
+    li {
+      display: inline;
+    }
+
+    a {
+      color: $text-color;
+    }
+  }
+
+  .email {
+    text-align: right;
   }
 }
 
