@@ -1,11 +1,16 @@
 ---
 ---
 
-$content-margin: 0 4em;
-$content-padding: 3em 0;
+$content-padding: 0 4rem;
 $header-footer-margin: 0 2em;
 $text-color: #2A363B;
 $duration-color: lightgray;
+
+@import "work";
+@import "about_me";
+@import "landing";
+@import "header";
+@import "footer";
 
 * {
     -webkit-box-sizing: border-box;
@@ -22,140 +27,16 @@ html, button, input, select, textarea,
     font-family: 'Raleway', sans-serif;
 }
 
-header {
-  position: absolute;
-  width: 100%;
-  margin: 1em 0;
-  font-size: 1em;
-
-  nav {
-    margin: 0;
-    text-align: right;
-    padding-right: 40px;
-  }
-}
-
-footer {
-  margin: $header-footer-margin;
-
-  .social-links, .email {
-    margin: 1em 0;
-  }
-
-  .social-links ul {
-    margin: 0;
-    padding: 0;
-    font-size: 1.5em;
-    list-style-type: none;
-
-    li {
-      display: inline;
-    }
-
-    a {
-      color: $text-color;
-    }
-  }
-
-  .email {
-    text-align: right;
-  }
+body {
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
 }
 
 main {
   padding: $content-padding;
-  margin: $content-margin;
   color: $text-color
 }
 
 a {
   text-decoration: none;
-}
-
-.landing {
-  display: table;
-  height: 100%;
-
-  .banner {
-    display: table-cell;
-    vertical-align: middle;
-
-    .img {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    .text {
-      padding-left: 1em;
-      font-size: 2em;
-      display: table-cell;
-      vertical-align: middle;
-    }
-  }
-}
-
-.about-me {
-  display: table;
-  height: 100%;
-
-  .img, .copy {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  .copy {
-    padding-left: 1em;
-    font-size: 2em;
-
-    p {
-      margin: 0;
-    }
-
-    div {
-      margin-bottom: 1em;
-    }
-  }
-}
-
-.work {
-
-  font-size: 1.5em;
-
-  .timeline h3, .title {
-    margin-top: 0;
-  }
-
-  .timeline {
-    font-size: 0.8em;
-    text-align: right;
-    padding-top: 0.5em;
-  }
-
-  .copy {
-    padding-left: 2em;
-  }
-
-  .duration {
-    font-size: 0.5em;
-    color: $duration-color;
-    padding-left: 0.5em;
-    vertical-align: middle;
-  }
-
-  .task {
-    border-width: 0 0 0 0.1em;
-    border-style: solid;
-
-    p {
-      margin: 0.5em 0;
-      padding-left: 0.3em;
-    }
-  }
-
-  .stack {
-    p {
-      text-align: right;
-      margin: 0;
-    }
-  }
 }

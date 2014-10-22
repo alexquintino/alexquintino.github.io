@@ -1,0 +1,36 @@
+$footer-height: 3rem;
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: $footer-height;
+  width: 100%;
+
+  .social-links, .email {
+    padding: 1em 2em;
+    background-color: white;
+  }
+
+  .social-links {
+    float:left;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5em;
+      list-style-type: none;
+
+      li {
+        display: inline;
+      }
+
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+  .email {
+    float: right;
+  }
+}

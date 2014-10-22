@@ -1,0 +1,21 @@
+.landing {
+  display: table;
+  height: 100%;
+
+  .banner {
+    display: table-cell;
+    vertical-align: middle;
+
+    .img {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .text {
+      padding-left: 1em;
+      font-size: 2em;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
