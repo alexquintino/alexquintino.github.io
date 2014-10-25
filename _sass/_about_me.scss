@@ -1,11 +1,7 @@
 .about-me {
-  display: table;
+  display: flex;
+  align-items: center;
   height: 100%;
-
-  .img, .copy {
-    display: table-cell;
-    vertical-align: middle;
-  }
 
   .copy {
     padding-left: 1em;
