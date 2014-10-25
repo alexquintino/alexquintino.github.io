@@ -13,9 +13,9 @@ $duration-color: lightgray;
 @import "footer";
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -24,8 +24,8 @@ html, body {
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
 }
 
 body {
