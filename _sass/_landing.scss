@@ -12,3 +12,11 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .landing {
+    .text {
+      padding-left: 0;
+    }
+  }
+}
