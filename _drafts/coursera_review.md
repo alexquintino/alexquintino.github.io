@@ -1,4 +1,5 @@
 ---
+layout: post
 ---
 A review of Coursera's Machine Learning course
 ==============================================
