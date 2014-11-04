@@ -1,7 +1,9 @@
 .landing {
+  height: 100%;
+  position: absolute;
+
   display: flex;
   align-items: center;
-  height: 100%;
 
   .text {
     padding-left: 1em;
