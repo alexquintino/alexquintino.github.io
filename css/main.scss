@@ -40,12 +40,10 @@ main {
   color: $text-color
 }
 
-a {
-  text-decoration: none;
-}
 
-a:visited {
-  color: $text-color;
+a:link, a:visited {
+  color: #E84A5F;
+  text-decoration: none;
 }
 
 h1,h2,h3,h4,h5,h6 {
