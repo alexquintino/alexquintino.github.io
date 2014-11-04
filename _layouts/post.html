@@ -2,12 +2,16 @@
 <html>
   <head>
     {% include head.html %}
-    <title>Alexandre Quintino</title>
+    <title>{{ page.title }} by Alexandre Quintino</title>
     {% include ga.html %}
   </head>
   <body>
     {% include header.html %}
-    {{ content }}
+    <main class="post">
+      <article>
+        {{ content }}
+      </article>
+    </main>
     {% include footer.html %}
   </body>
 </html>

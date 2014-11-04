@@ -5,6 +5,7 @@ footer {
   bottom: 0;
   height: $footer-height;
   width: 100%;
+  z-index: 100;
 
   .social-links, .email {
     padding: 1em 2em;

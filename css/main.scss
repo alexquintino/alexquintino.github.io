@@ -11,6 +11,7 @@ $duration-color: lightgray;
 @import "landing";
 @import "header";
 @import "footer";
+@import "post";
 
 * {
   -webkit-box-sizing: border-box;
@@ -18,7 +19,7 @@ $duration-color: lightgray;
   box-sizing: border-box;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
@@ -29,21 +30,20 @@ html, button, input, select, textarea,
 }
 
 body {
-  padding-top: $header-height;
-  padding-bottom: $footer-height;
+  min-height: 100%;
 }
 
 main {
   padding: $content-padding;
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
   color: $text-color
 }
 
-a {
-  text-decoration: none;
-}
 
-a:visited {
-  color: $text-color;
+a:link, a:visited {
+  color: #E84A5F;
+  text-decoration: none;
 }
 
 h1,h2,h3,h4,h5,h6 {

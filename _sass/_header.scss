@@ -5,6 +5,7 @@ header {
   top: 0;
   width: 100%;
   height: $header-height;
+  z-index: 100;
 
   nav {
     padding: 1em 2em;
@@ -20,6 +21,11 @@ header {
       li {
         display: inline;
         margin-left: 1em;
+
+        .active {
+          color: $text-color;
+          font-weight: 400;
+        }
       }
     }
   }
