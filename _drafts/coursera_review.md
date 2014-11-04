@@ -4,6 +4,8 @@ layout: post
 A review of Coursera's Machine Learning course
 ==============================================
 
+<div class="pubdate">on <time datetime="{{ page.date }}"> {{ page.date  | date_to_long_string }} </time></div>
+
 I recently finished Andrew Ng's Machine Learning course at Coursera and thought a review of it would be a great way to kickstart this blog.
 
 So the course runs for about 10 weeks, where each week there are 1-2 topics to study in the form of video lectures, review questions and a programming assignment.

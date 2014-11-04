@@ -1,3 +1,17 @@
 .post {
-  font-size: 1.4em;
+  font-size: 1.6em;
+  padding-left: 10em;
+  padding-right: 10em;
+
+  text-align: justify;
+
+  p {
+    padding-left: 1em;
+    line-height: 1.4em;
+  }
+
+  .pubdate {
+    margin-top: -2em;
+    font-size: 0.75em;
+  }
 }
