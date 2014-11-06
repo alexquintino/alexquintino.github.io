@@ -9,11 +9,17 @@
   .timeline {
     font-size: 0.8em;
     text-align: right;
+    @media screen and (max-width: 48em) {
+      text-align: left;
+    }
     padding-top: 0.5em;
   }
 
   .copy {
     padding-left: 2em;
+    @media screen and (max-width: 48em) {
+      padding-left: 0;
+    }
   }
 
   .duration {
@@ -33,6 +39,14 @@
   }
 
   .stack {
+    .label {
+      @media screen and (max-width: 48em) {
+        * {
+          margin: 0;
+        }
+      }
+    }
+
     p {
       text-align: right;
       margin: 0;

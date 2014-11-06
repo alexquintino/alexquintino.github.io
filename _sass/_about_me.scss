@@ -1,10 +1,20 @@
 .about-me {
-  display: flex;
-  align-items: center;
-  height: 100%;
+
+  @media screen and (min-width: 64em) {
+    align-items: center;
+    height: 100%;
+    display: flex;
+  }
+
+  .img {
+    margin-bottom: 1em;
+  }
 
   .copy {
     padding-left: 1em;
+    @media screen and (max-width: 48em) {
+      padding-left: 0;
+    }
     font-size: 2em;
 
     p {
