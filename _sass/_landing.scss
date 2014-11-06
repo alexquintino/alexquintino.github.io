@@ -7,16 +7,12 @@
 
   .text {
     padding-left: 1em;
+    @media screen and (max-width: 48em) {
+      padding-left: 0;
+    }
     font-size: 2em;
     display: flex;
     align-items: center;
   }
 }
 
-@media screen and (max-width: 48em) {
-  .landing {
-    .text {
-      padding-left: 0;
-    }
-  }
-}

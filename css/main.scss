@@ -1,7 +1,8 @@
 ---
 ---
 
-$content-padding: 0 4rem;
+$content-padding: 4rem;
+$content-padding-mobile: 1rem;
 $header-footer-margin: 0 2em;
 $text-color: #2A363B;
 $duration-color: lightgray;
@@ -34,12 +35,12 @@ body {
 }
 
 main {
-  padding: $content-padding;
-  padding-top: $header-height;
-  padding-bottom: $footer-height;
+  padding: $header-height $content-padding $footer-height $content-padding ;
+  @media screen and (max-width: 48em) {
+    padding: $header-height $content-padding-mobile $footer-height $content-padding-mobile;
+  }
   color: $text-color
 }
-
 
 a:link, a:visited {
   color: #E84A5F;
