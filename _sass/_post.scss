@@ -6,10 +6,15 @@
   }
   text-align: justify;
 
-  p {
-    @media screen and (min-width: 64em) {
-      padding-left: 1em;
+  @media screen and (min-width: 64em) {
+    p {
+      padding-left: 1rem;
     }
+    div.highlight {
+      margin-left: 1rem;
+    }
+  }
+  p {
     line-height: 1.4em;
   }
 
