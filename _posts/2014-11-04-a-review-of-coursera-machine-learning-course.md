@@ -2,10 +2,6 @@
 layout: post
 title: a review of Coursera's Machine Learning course
 ---
-a review of Coursera's Machine Learning course
-==============================================
-
-<div class="pubdate">on <time datetime="{{ page.date }}"> {{ page.date  | date_to_long_string }} </time></div>
 
 I recently finished Andrew Ng's [Machine Learning course](https://www.coursera.org/course/ml) at Coursera and thought a review of it would be a great way to kick-start this blog.
 

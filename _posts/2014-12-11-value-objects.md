@@ -3,11 +3,7 @@ layout: post
 title: Value Objects
 ---
 
-Value Objects
-=============
-
-I recently began reading the famous [Patterns of Enterprise Application Architecture](http://martinfowler.com/books/eaa.html){:rel="nofollow"} and it gave me the idea to start a series of posts about what I consider to be the most important patterns and about those that I have used and seen in the wild. These posts will be aimed at beginners to intermediates and will try to explain these concepts in a simpler and pragmatic way.
-
+I began reading Martin Fowler's [Patterns of Enterprise Application Architecture](http://martinfowler.com/books/eaa.html) recently and it gave me the idea to start a series of posts about what I consider to be the most important [patterns](https://en.wikipedia.org/wiki/Software_design_pattern) and about those that I have used and seen in the wild. I'll try to explain them in a simpler and pragmatic way.
 I decided to start with Value Objects because they are quite simple to understand but powerful to use when the size of a code base increases.
 
 example
@@ -30,7 +26,7 @@ end
 
 By now you should be seeing a red flag. There's 5 arguments being passed to the register method. Although the right amount of arguments is debatable, it's a good practice to pass as fewer arguments as possible. It improves code readability, testability and reduces the chance of bugs. This becomes painfully obvious if we also add a user's address(street name, postal code, city, etc) to the list of arguments.
 
-Passing too many arguments is a clear case of what's called a [code smell](https://en.wikipedia.org/wiki/Code_smell){:rel="nofollow"}. A code smell is a warning that maybe something is wrong and something (e.g. refactoring) should be done about it.
+Passing too many arguments is a clear case of what's called a [code smell](https://en.wikipedia.org/wiki/Code_smell). A code smell is a warning that maybe something is wrong and something (e.g. refactoring) should be done about it.
 
 enter Value Objects
 -------------------
@@ -64,7 +60,7 @@ end
 
 This way, the knowledge or logic of how to return a full name is enclosed in the Name class, as it should be.
 
-The concept of Value Objects is a proven one and quite widespread. In fact, the [Date](http://www.ruby-doc.org/stdlib-2.1.5/libdoc/date/rdoc/Date.html){:rel="nofollow"} class is already included in Ruby's standard library, so no need to create or own. Other examples of Value Objects would be [IPAddr](http://www.ruby-doc.org/stdlib-2.1.5/libdoc/ipaddr/rdoc/IPAddr.html){:rel="nofollow"} or [URI](http://www.ruby-doc.org/stdlib-2.1.5/libdoc/uri/rdoc/URI.html){:rel="nofollow"}. Other common Value Objects that you might create or find in other applications are Money objects for handling money and currency amounts, Point objects to represent a coordinate in a 2D/3D space or Distance objects to hold a distance and it's unit type.
+The concept of Value Objects is a proven one and quite widespread. In fact, the [Date](http://www.ruby-doc.org/stdlib-2.1.5/libdoc/date/rdoc/Date.html) class is already included in Ruby's standard library, so no need to create or own. Other examples of Value Objects would be [IPAddr](http://www.ruby-doc.org/stdlib-2.1.5/libdoc/ipaddr/rdoc/IPAddr.html) or [URI](http://www.ruby-doc.org/stdlib-2.1.5/libdoc/uri/rdoc/URI.html). Other common Value Objects that you might create or find in other applications are Money objects for handling money and currency amounts, Point objects to represent a coordinate in a 2D/3D space or Distance objects to hold a distance and it's unit type.
 
 I hope you understood the pattern of Value Objects and let me know if you have any questions!
 
