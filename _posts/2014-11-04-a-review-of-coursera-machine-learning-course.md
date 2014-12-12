@@ -1,5 +1,6 @@
 ---
 layout: post
+title: a review of Coursera's Machine Learning course
 ---
 a review of Coursera's Machine Learning course
 ==============================================

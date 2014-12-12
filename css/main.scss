@@ -5,7 +5,7 @@ $content-padding: 4rem;
 $content-padding-mobile: 1rem;
 $header-footer-margin: 0 2em;
 $text-color: #2A363B;
-$duration-color: lightgray;
+$faded-out-color: lightgray;
 
 @import "work";
 @import "about_me";
@@ -13,6 +13,8 @@ $duration-color: lightgray;
 @import "header";
 @import "footer";
 @import "post";
+@import "syntax";
+@import "blog";
 
 * {
   -webkit-box-sizing: border-box;

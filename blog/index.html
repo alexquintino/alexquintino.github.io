@@ -3,5 +3,12 @@ layout: post
 title: "blog"
 page: blog
 ---
-
-{{ site.posts.first.content }}
+<mian class="blog">
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date">{{ post.date | date_to_long_string}}</span></h2>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
