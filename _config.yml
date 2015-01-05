@@ -1,2 +1,4 @@
 exclude: ["alexquintino.github.io.sublime-project", "alexquintino.github.io.sublime-workspace"]
 permalink: /blog/:title
+gems:
+  - jekyll-sitemap
