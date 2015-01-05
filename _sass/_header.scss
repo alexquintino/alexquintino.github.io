@@ -6,10 +6,12 @@ header {
   width: 100%;
   height: $header-height;
   z-index: 100;
+  padding: 1em 2em;
+  margin: 0;
+
+
 
   nav {
-    padding: 1em 2em;
-    margin: 0;
     float: right;
     background-color: white;
 
@@ -28,5 +30,19 @@ header {
         }
       }
     }
+  }
+
+  .logo {
+    div {
+      font-family: 'CODE', sans-serif;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      letter-spacing: 5px;
+    }
+
+    .last-name {
+      letter-spacing: 7.5px;
+    }
+
   }
 }
