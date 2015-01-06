@@ -1,8 +1,7 @@
 ---
 ---
-
-$content-padding: 4rem;
-$content-padding-mobile: 1rem;
+$min-padding-sides: 1rem;
+$max-padding-sides: 3rem;
 $header-footer-margin: 0 2em;
 $text-color: #2A363B;
 $faded-out-color: lightgray;
@@ -37,9 +36,11 @@ body {
 }
 
 main {
-  padding: $header-height $content-padding $footer-height $content-padding ;
+  margin-left: $max-header-width;
+  padding: $min-header-height $max-padding-sides $footer-height 0;
   @media screen and (max-width: 48em) {
-    padding: $header-height $content-padding-mobile $footer-height $content-padding-mobile;
+    margin-left: 0;
+    padding: $max-header-height $min-padding-sides $footer-height $min-padding-sides;
   }
   color: $text-color
 }

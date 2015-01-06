@@ -6,9 +6,11 @@ footer {
   height: $footer-height;
   width: 100%;
   z-index: 100;
+  padding-left: $min-padding-sides;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   .social-links, .email {
-    padding: 1em 2em;
     background-color: white;
   }
 
