@@ -9,6 +9,7 @@
   }
 
   ul {
+    margin: 0;
     padding: 0;
     list-style-type: none;
     li {
@@ -43,10 +44,6 @@
 
 .blog, .post {
   font-size: 1.6em;
-  @media screen and (min-width: 64em) {
-    padding-left: 10em;
-    padding-right: 10em;
-  }
   p {
    text-align: justify;
   }
