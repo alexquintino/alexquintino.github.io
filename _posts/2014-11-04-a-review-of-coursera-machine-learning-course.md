@@ -1,6 +1,8 @@
 ---
 layout: post
 title: a review of Coursera's Machine Learning course
+description: "a personal review of Coursera's Machine Learning course"
+page: blog
 ---
 
 I recently finished Andrew Ng's [Machine Learning course](https://www.coursera.org/course/ml) at Coursera and thought a review of it would be a great way to kick-start this blog.

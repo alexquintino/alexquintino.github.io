@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Value Objects
+page: blog
+description: "a small article about what value objects are and how to use them"
 ---
 
 I began reading Martin Fowler's [Patterns of Enterprise Application Architecture](http://martinfowler.com/books/eaa.html) recently and it gave me the idea to start a series of posts about what I consider to be the most important [patterns](https://en.wikipedia.org/wiki/Software_design_pattern) and about those that I have used and seen in the wild. I'll try to explain them in a simpler and pragmatic way.
