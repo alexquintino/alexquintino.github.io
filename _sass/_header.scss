@@ -1,55 +1,48 @@
 $min-header-height: 1rem;
-$max-header-height: 4rem;
+$max-header-height: 2.5rem;
 $max-header-width: 15rem;
 
 header {
-  background-color: white;
-  position: fixed;
-  z-index: 100;
-  margin: 0;
+
+  @include side-panel($max-header-height);
   top: 0;
 
-  @media screen and (max-width: 48em) { // top
-    width: 100%;
-    height: $max-header-height;
-  }
-  @media screen and (min-width: 48em) { // side
-    height: 100%;
-    width: $max-header-width;
-    padding-top: $min-header-height;
-  }
-
-  padding-left: $min-padding-sides;
-  padding-right: $min-padding-sides;
-
   .logo {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     div {
       font-family: 'CODE', sans-serif;
       font-size: 1.5rem;
       line-height: 2rem;
       letter-spacing: 5px;
+
+      @media screen and (max-width: 48em) {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 2.5px
+      }
     }
 
     .last-name {
       letter-spacing: 7.5px;
+      @media screen and (max-width: 48em) {
+        letter-spacing: 3.75px
+      }
     }
   }
 
   nav {
-    @media screen and (max-width: 48em) {
-      padding-top: $min-header-height;
-    }
     ul {
       padding: 0;
       margin: 0;
       line-height: 1;
 
       li {
+        font-size: 1.5rem;
         @media screen and (max-width: 48em) {
           display: inline;
           margin-left: 1em;
           padding-bottom: 0;
+          font-size: 1rem;
         }
         padding-bottom: 2rem;
 

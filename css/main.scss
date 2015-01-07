@@ -4,7 +4,30 @@ $min-padding-sides: 1rem;
 $max-padding-sides: 3rem;
 $header-footer-margin: 0 2em;
 $text-color: #2A363B;
+$link-color: #E74C3C;
 $faded-out-color: lightgray;
+
+@mixin side-panel($height-mobile) {
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  margin: 0;
+  padding-left: $min-padding-sides;
+  padding-right: $min-padding-sides;
+
+  @media screen and (min-width: 48em) { // side
+    width: $max-header-width;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 48em) { // top/bottom
+    width: 100%;
+    height: $height-mobile;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 
 @import "work";
 @import "about_me";
@@ -36,7 +59,7 @@ body {
 }
 
 main {
-  margin-left: $max-header-width;
+  margin-left: $max-header-width; // push content to the side to make room for header
   padding: $min-header-height $max-padding-sides $footer-height 0;
   @media screen and (max-width: 48em) {
     margin-left: 0;
@@ -46,7 +69,7 @@ main {
 }
 
 a:link, a:visited {
-  color: #E84A5F;
+  color: $link-color;
   text-decoration: none;
 }
 

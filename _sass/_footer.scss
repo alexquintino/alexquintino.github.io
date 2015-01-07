@@ -1,21 +1,13 @@
 $footer-height: 3rem;
 
 footer {
-  position: fixed;
+  @include side-panel($footer-height);
   bottom: 0;
-  height: $footer-height;
-  width: 100%;
-  z-index: 100;
-  padding-left: $min-padding-sides;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-
-  .social-links, .email {
-    background-color: white;
-  }
 
   .social-links {
-    float:left;
+    @media screen and (max-width: 48em) { // top/bottom
+      text-align: right;
+    }
 
     ul {
       margin: 0;
@@ -33,7 +25,4 @@ footer {
     }
   }
 
-  .email {
-    float: right;
-  }
 }
