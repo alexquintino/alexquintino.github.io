@@ -3,6 +3,7 @@ layout: post
 page: blog
 title: "Understanding the Facade Pattern"
 description: "an article explaining the Facade and Gateway patterns and their uses"
+related_posts: [ "/blog/value-objects"]
 ---
 
 The Facade pattern is something that I use all the time and it's one of those things that will come naturally to any developer as he becomes more experienced.

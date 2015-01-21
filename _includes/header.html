@@ -13,5 +13,18 @@
         <li><a href="/blog" {% if page.page == "blog" %}class="active" {%endif%}>blog</a></li>
       </ul>
     </nav>
+
+    {% if page.related_posts %}
+      <div class="related-posts">
+        <h4 class="header">Related posts</h4>
+        <ul>
+        {% for post in site.posts %}
+          {% if page.related_posts contains post.id %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
   </div>
 </header>

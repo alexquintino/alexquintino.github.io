@@ -8,6 +8,7 @@ header {
   top: 0;
 
   .logo {
+    color: $text-color;
     margin-bottom: 5rem;
     div {
       font-family: 'CODE', sans-serif;
@@ -51,6 +52,21 @@ header {
           font-weight: 400;
         }
       }
+    }
+  }
+
+  .related-posts {
+    @media screen and (max-width: 48em) {
+      display: none;
+    }
+    .header {
+      color: $text-color;
+      margin: 0.5rem 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
     }
   }
 }
