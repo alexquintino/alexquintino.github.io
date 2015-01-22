@@ -7,6 +7,11 @@ $text-color: #2A363B;
 $link-color: #E74C3C;
 $faded-out-color: lightgray;
 
+$breakpoint-small: 48em;
+$breakpoint-medium: 64em;
+$breakpoint-large: 80em;
+
+
 @mixin side-panel($height-mobile) {
   background-color: white;
   position: fixed;
@@ -15,13 +20,13 @@ $faded-out-color: lightgray;
   padding-left: $min-padding-sides;
   padding-right: $min-padding-sides;
 
-  @media screen and (min-width: 48em) { // side
+  @media screen and (min-width: $breakpoint-small) { // side
     width: $max-header-width;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
-  @media screen and (max-width: 48em) { // top/bottom
+  @media screen and (max-width: $breakpoint-small) { // top/bottom
     width: 100%;
     height: $height-mobile;
     padding-top: 0;
@@ -61,7 +66,7 @@ body {
 main {
   margin-left: $max-header-width; // push content to the side to make room for header
   padding: $min-header-height $max-padding-sides $footer-height 0;
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: $breakpoint-small) {
     margin-left: 0;
     padding: $max-header-height $min-padding-sides $footer-height $min-padding-sides;
   }

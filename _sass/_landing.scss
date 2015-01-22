@@ -7,7 +7,7 @@
 
   .text {
     padding-left: 1em;
-    @media screen and (max-width: 48em) {
+    @media screen and (max-width: $breakpoint-small) {
       padding-left: 0;
     }
     font-size: 2em;

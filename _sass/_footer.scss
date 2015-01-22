@@ -5,7 +5,7 @@ footer {
   bottom: 0;
 
   .social-links {
-    @media screen and (max-width: 48em) { // top/bottom
+    @media screen and (max-width: $breakpoint-small) { // top/bottom
       text-align: right;
     }
 

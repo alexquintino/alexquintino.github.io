@@ -9,7 +9,7 @@
   .timeline {
     font-size: 0.8em;
     text-align: right;
-    @media screen and (max-width: 48em) {
+    @media screen and (max-width: $breakpoint-small) {
       text-align: left;
     }
     padding-top: 0.5em;
@@ -17,7 +17,7 @@
 
   .copy {
     padding-left: 2em;
-    @media screen and (max-width: 48em) {
+    @media screen and (max-width: $breakpoint-small) {
       padding-left: 0;
     }
   }
@@ -40,7 +40,7 @@
 
   .stack {
     .label {
-      @media screen and (max-width: 48em) {
+      @media screen and (max-width: $breakpoint-small) {
         * {
           margin: 0;
         }
