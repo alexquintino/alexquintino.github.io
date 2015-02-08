@@ -2,29 +2,40 @@
 layout: default
 page: about
 title: "about Alexandre Quintino"
-description: "Some personal things about me"
+description: "Some things about me as a person and professional"
 ---
 
-<main class="pure-g about-me">
-  <div class="pure-u-1 pure-u-md-1-3 img">
-    <img src="/img/me2.jpg" class="pure-img">
-  </div>
-  <div class="pure-u-1 pure-u-md-2-3 copy">
-    <div>
-      <p>my name is alexandre quintino and I'm a software engineer.</p>
-    </div>
+<main class="about-me">
+  <article>
+    <section>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+          <img src="/img/me2.jpg" class="pure-img img">
+        </div>
+        <div class="pure-u-1 pure-u-md-2-3 copy-right">
+            <h1 class="header">my name is alexandre quintino and I'm a software developer.</h1>
 
-    <div>
-      <p>I come from Portugal where I studied at <a href={{site.data.links.ist}}>IST</a> and worked for <a href={{site.data.links.gatewit}}>Gatewit</a>.</p>
-      <p>after that, I moved to Stockholm to study at <a href={{site.data.links.kth}}>KTH</a> and later work for <a href={{site.data.links.ongame}}>Ongame</a>.</p>
-      <p>nowadays I'm based in Geneva where I work as an independent software developer / consultant.</p>
-    </div>
+            <p>nowadays I'm based in Geneva where I work as an independent software developer / consultant.</p>
+            <p>In the past I studied in Lisbon at <a href={{site.data.links.ist}}>IST</a> and worked for <a href={{site.data.links.gatewit}}>Gatewit</a>. after that, I moved to Stockholm to study at <a href={{site.data.links.kth}}>KTH</a> and later work for <a href={{site.data.links.ongame}}>Ongame</a>.</p>
+        </div>
+      </div>
+    </section>
 
-    <div>
-      <p>I love what I do! I think it's a great time to be into software development. there's so many different and interesting areas today, from machine learning to web development to creative coding.</p>
-      <p>that's why I spend a lot of time reading articles and newsletters, keeping up with the latest trends and overall expanding my knowledge and skills.</p>
-    </div>
+    <div class="pure-g">
+      <div class="pure-u-1">
+        <section>
+          <div id="skills"></div>
+          <p>I have been developing web applications for over 3 years using all sorts of technologies, so my skill set reflects that. I have also been for a long time interested in data visualization. That interest has led me to experiment with tools like Processing and D3.js and is responsible for my recent involvement with Machine Learning and Big Data.</p>
+          <p>I recently completed the <a href={{site.data.links.coursera}}>Machine Learning course at Coursera</a> and my goal is to get more involved with that field and use the knowledge to help companies explore their data and bring value out of it.</p>
+        </section>
 
-    <p>the rest of my time is spent traveling, hiking, cycling and discovering music.</p>
-  </div>
+        <section>
+          <p>I absolutely love what I do! I think it's a great time to be into software development. there's so many different and interesting areas today, from machine learning to web development and from mobile applications to creative coding.</p>
+          <p>It's challenging to keep up with the fast pace of software development and IT in general. that's why I spend a lot of time reading articles and newsletters, keeping up with the latest trends and overall expanding my knowledge and skills. It's the best way to get introduced to new things and technologies and it's responsible for a big part of my evolution as a software developer.</p>
+        </section>
+      </div>
+    </div>
+  </article>
 </main>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/js/skills.js"></script>

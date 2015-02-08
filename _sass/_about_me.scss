@@ -1,28 +1,51 @@
 .about-me {
 
-  @media screen and (min-width: $breakpoint-medium) {
-    align-items: center;
-    height: 100%;
-    display: flex;
-  }
-
-  .img {
-    margin-bottom: 1em;
-  }
-
-  .copy {
-    padding-left: 1em;
-    @media screen and (max-width: $breakpoint-small) {
-      padding-left: 0;
-    }
-    font-size: 2em;
+  article {
+    font-size: 1.7em;
 
     p {
-      margin: 0;
+      margin: 0.5em 0 0 0;
+      text-align: justify;
     }
 
-    div {
+    .copy-right {
+      padding-left: 1em;
+      @media screen and (max-width: $breakpoint-small) {
+        padding-left: 0;
+      }
+    }
+
+    #skills {
+      text-align: center;
+      @media screen and (min-width: $breakpoint-small) {
+        float: right;
+      }
+    }
+
+    section {
       margin-bottom: 1em;
+    }
+
+    .header {
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+  }
+
+  .bubble .skill {
+    font-weight: 400;
+    text-anchor: middle;
+
+    circle.framework {
+      fill: #FF6B6B;
+    }
+
+    circle.language {
+      fill: #4ECDC4;
+    }
+
+    circle.tool {
+      fill: #C7F464;
     }
   }
 }
