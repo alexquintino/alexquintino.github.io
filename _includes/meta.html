@@ -1,0 +1,14 @@
+{% if page.description %}
+  <meta name="Description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
+{% endif %}
+
+<meta property="og:title" content="{{ page.title }}"/>
+{% assign url = page.url | remove:"index.html" %}
+<meta property="og:url" content="{{ site.url | append: url }}"/>
+
+{% if page.layout == "post" %}
+  <meta property="og:type" content="article"/>
+{% endif %}
+
+<meta property="og:site_name" content="Alexandre Quintino"/>

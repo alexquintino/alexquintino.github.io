@@ -1,3 +1,6 @@
 alexquintino.github.io.sublime-project
 alexquintino.github.io.sublime-workspace
 _site
+.sass-cache/
+css/pure-min.css
+js/d3.v3.min.js
