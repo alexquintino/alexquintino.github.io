@@ -1,7 +1,7 @@
 ---
 layout: post
 page: blog
-title: "Processing over 50 million records: trying out Apache Spark"
+title: "Processing over 50 million items: first steps with Apache Spark"
 description:
 ---
 
@@ -57,17 +57,21 @@ And that was my first problem with Spark. I had a XML to parse and not every lin
 Besides parsing XML files, another thing I wanted to do was to filter out all the artists and their releases based on a list of favorite artists. This turned out to be a breeze with Apache Spark, using mostly **map** and **filter** functions over TSV files. Below is a sample of the code to go through all the tracks and select the ones that contain any of the artists from a given list. Full class [here](https://github.com/alexquintino/discogs-parser/blob/master/scala/src/main/scala/FilterArtistsAndReleases.scala).
 
 {% highlight scala %}
-// artist_id / name
-val artistsIds = sc.textFile("output/artists_with_ids")
-                    .map(_.split("\t"))
-                    .map(artist => artist(0))
-                    .collect.toSet
+def main(args: Array[String]) {
+  // artist_id / name
+  val artistsIds = sc.textFile("output/artists_with_ids")
+                      .map(_.split("\t"))
+                      .map(artist => artist(0))
+                      .collect.toSet
 
-// release_id / artists / title / remixers - filter out empty tracks
-val tracks = sc.textFile("output/discogs_tracks.tsv").map(_.split("\t")).filter(_.size > 2).cache()
+  // release_id / artists / title / remixers - filter out empty tracks
+  val tracks = sc.textFile("output/discogs_tracks.tsv").map(_.split("\t")).filter(_.size > 2).cache()
 
-// release ids taken from selected tracks - there will be repeated releases
-val releaseIdsFromTracks = grabTracksForArtists(tracks, artistsIds).map(track => track(0)).distinct.collect.toSet
+  // release ids taken from selected tracks - there will be repeated releases
+  val releaseIdsFromTracks = grabTracksForArtists(tracks, artistsIds).map(track => track(0)).distinct.collect.toSet
+
+  // (...)
+}
 
 
 def grabTracksForArtists(tracks: RDD[Array[String]], artistsIds: Set[String]): RDD[Array[String]] = {
@@ -80,25 +84,30 @@ def containsArtists(artists: Array[String], artists_ids: Set[String]): Boolean =
 }
 {% endhighlight %}
 
-I think the code is quite simple to understand. There's just a bunch of **map** modifying the data to my needs and **filter** to select the items I want according to a function. There's also **collect** that actually triggers a job and returns the results in an array, **distinct** that goes over a collection and removes duplicates and **cache** that tells Spark to cache that collection in memory to improve performance when using it later.
+I think the code is quite simple to understand. There's just a bunch of **map** modifying the data to my needs and **filter** to select the items: first steps I want according to a function. There's also **collect** that actually triggers a job and returns the results in an array, **distinct** that goes over a collection and removes duplicates and **cache** that tells Spark to cache that collection in memory to improve performance when using it later.
 
 Another cool thing about Spark is it's Web UI that I found out while waiting for this job to finish. It let's you checkout the status of your job and tasks and gives you an overview of your cluster, among other things.
 <img class="pure-img" src="/img/spark-ui.jpg" alt="Apache Spark's Web UI" title="Apache Spark's Web UI">
 
 ### Example 2
-Here's a sample of another class I wrote while playing around with Spark. Check the full class [here](https://github.com/alexquintino/discogs-parser/blob/master/scala/src/main/scala/OutputNodesAndRelationships.scala). This time to output each artist/release/track as nodes, and output all the relationships between each node. As a limitation of the tool that I'm feeding this data into, I had to come up with a unique index in the dataset to be used when outputting the relationships.
+Here's a sample of another class I wrote while playing around with Spark (full class [here](https://github.com/alexquintino/discogs-parser/blob/master/scala/src/main/scala/OutputNodesAndRelationships.scala)). This time to output each artist/release/track as nodes, and output all the relationships between each node. As a limitation of the tool that I'm feeding this data into, I had to come up with a unique index in the dataset to be used when outputting the relationships.
 
 {% highlight scala %}
-val artists = getArtists(sc.textFile("output/artists_with_ids", 1))
-val artistsLastIndex = artists.map(_(0).toLong).max
+def main(args: Array[String]) {
 
-// release_id / master_id / title / main_artists
-val releases = getReleases(sc.textFile("output/releases", 1), artistsLastIndex)
+  // get list of artists with index
+  val artists = getArtists(sc.textFile("output/artists_with_ids", 1))
+  val artistsLastIndex = artists.map(_(0).toLong).max
 
-extractArtistsReleasesRelationships(artists, releases)
-  .map(_.mkString("\t"))
-  .saveAsTextFile("output/artist_release_relationships")
+  // get releases with index based on the artists max index
+  val releases = getReleases(sc.textFile("output/releases", 1), artistsLastIndex)
 
+  extractArtistsReleasesRelationships(artists, releases)
+    .map(_.mkString("\t"))
+    .saveAsTextFile("output/artist_release_relationships")
+}
+
+// join artists with releases
 def extractArtistsReleasesRelationships(artists: RDD[Array[String]], releases: RDD[Array[String]]): RDD[List[Any]] = {
   val artistsMap = artists.map(artist => (artist(1), artist(0)))
   val releasesMap =  releases.flatMap(restructureRelease)
@@ -120,7 +129,25 @@ def extractArtistReleaseRelationship(rel: (String, (String, String))): List[Any]
 
 The interesting thing here happens in **extractArtistsReleasesRelationships** where I'm creating a key-value map of artists and of releases, based on the artist's Id and then joining those maps together. The result is a list of associations between artists and releases nodes. From that I extract the indexes of each artist and release and output that to a file.
 
+The output will be something like:
 
+{% highlight text %}
+artists_nodes - indexes / id / name / type
+25944 25944 Mars  Artist
+430816  430816  Gary Beck Artist
+{% endhighlight %}
+
+{% highlight text %}
+tracklist_nodes - index / id / name / type
+6825338 2984922 Got My Mind Made Up Tracklist
+6825400 2984984 Red D Meets Vol 1 Tracklist
+{% endhighlight %}
+
+{% highlight text %}
+artist_release_relationships - start / end / type
+25944 6825338 HAS_TRACKLIST
+430816 6825400 HAS_TRACKLIST
+{% endhighlight %}
 
 Final Impressions
 -----------------
