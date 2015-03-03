@@ -1,11 +1,18 @@
 {% if page.description %}
   <meta name="Description" content="{{ page.description }}">
   <meta property="og:description" content="{{ page.description }}">
+  <meta name="twitter:description" content="{{ page.description }}" />
 {% endif %}
 
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@amsquintino" />
+
 <meta property="og:title" content="{{ page.title }}"/>
-{% assign url = page.url | remove:"index.html" %}
-<meta property="og:url" content="{{ site.url | append: url }}"/>
+<meta name="twitter:title" content="{{ page.title }}" />
+
+{% assign url = site.url | append: page.url | remove:"index.html" %}
+<meta property="og:url" content="{{ url }}"/>
+<meta name="twitter:url" content="{{ url }}" />
 
 {% if page.layout == "post" %}
   <meta property="og:type" content="article"/>
