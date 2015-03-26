@@ -71,7 +71,7 @@ After this initial setup I started thinking about my first task. I had been deve
 And that was my first obstacle with Spark. I had a XML to parse and not every line was an item. After some research I could not find an easy way to do it and since I already had the Ruby scripts I decided to postpone that to another time and carried on with other things. Lesson number 1 - if your data is in files, having an item per line really really helps.
 
 ### Example 1
-Besides parsing XML files, another thing I wanted to do was to filter out all the artists and their releases based on a list of favorite artists. This turned out to be a breeze with Apache Spark, using mostly **map** and **filter** functions over TSV files. Below is a sample of the code to go through all the tracks and select the ones that contain any of the artists from a given list. Full class [here](https://github.com/alexquintino/discogs-parser/blob/master/scala/src/main/scala/FilterArtistsAndReleases.scala).
+Besides parsing XML files, another thing I wanted to do was to filter out all the artists and their releases based on a list of favorite artists. This turned out to be a breeze with Apache Spark, using mostly **map** and **filter** functions over TSV files. Below is a sample of the code to go through all the tracks and select the ones that contain any of the artists from a given list. Full class [here](https://github.com/alexquintino/discogs-parser/blob/efb9fbecc52dad5b6453d9c0d87bcfc1efa2768a/scala/src/main/scala/FilterArtistsAndReleases.scala).
 
 {% highlight scala %}
 def main(args: Array[String]) {
@@ -107,7 +107,7 @@ Another cool thing about Spark is it's Web UI that I found out while waiting for
 <img class="pure-img" src="/img/spark-ui.jpg" alt="Apache Spark's Web UI" title="Apache Spark's Web UI">
 
 ### Example 2
-Here's a sample of another class I wrote while playing around with Spark (full class [here](https://github.com/alexquintino/discogs-parser/blob/master/scala/src/main/scala/OutputNodesAndRelationships.scala)). This time to output each artist/release as nodes, and output all the relationships between each node. As a limitation of the tool that I'm feeding this data into, I had to come up with a unique index in the dataset to be used when outputting the relationships. I used the maximum id for artists as a starting point for the releases' index. That is what *getArtists* and *getReleases* is doing.
+Here's a sample of another class I wrote while playing around with Spark (full class [here](https://github.com/alexquintino/discogs-parser/blob/efb9fbecc52dad5b6453d9c0d87bcfc1efa2768a/scala/src/main/scala/OutputNodesAndRelationships.scala)). This time to output each artist/release as nodes, and output all the relationships between each node. As a limitation of the tool that I'm feeding this data into, I had to come up with a unique index in the dataset to be used when outputting the relationships. I used the maximum id for artists as a starting point for the releases' index. That is what *getArtists* and *getReleases* is doing.
 
 {% highlight scala %}
 def main(args: Array[String]) {
