@@ -5,6 +5,7 @@ title: Visualizing collaborations between artists
 description: I analyzed my Spotify music collection and visualized the relationships between artists to see what interesting things come up.
 related_posts: ["/blog/processing-over-50-million-items-with-apache-spark"]
 meta_image: /img/artist_vis/1024x_overview_no_labels.jpg
+twitter_card: summary_large_image
 ---
 
 Continuing the work from my [previous post](/blog/processing-over-50-million-items-with-apache-spark/), I thought it would be a cool thing to analyze my Spotify music collection and try to visualize the relationships between artists and see what interesting things come up. Here's what I found out!
