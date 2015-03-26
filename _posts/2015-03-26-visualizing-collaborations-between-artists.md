@@ -6,13 +6,14 @@ description: I analyzed my Spotify music collection and visualized the relations
 related_posts: ["/blog/processing-over-50-million-items-with-apache-spark"]
 meta_image: /img/artist_vis/1024x_overview_no_labels.jpg
 twitter_card: summary_large_image
+enable_click_tracking: true
 ---
 
 Continuing the work from my [previous post](/blog/processing-over-50-million-items-with-apache-spark/), I thought it would be a cool thing to analyze my Spotify music collection and try to visualize the relationships between artists and see what interesting things come up. Here's what I found out!
 
 overview
 --------
-This is how the graph looks like (large version [here](/img/artist_vis/overview.png))
+This is how the graph looks like (large version <a href="/img/artist_vis/overview.png" class="external-link">here</a>)
 <img class="pure-img" src="/img/artist_vis/1024x_overview.jpg" alt="Overview" title="Overview">
 
 There are 1171 nodes and 7376 edges (created from 47268 connections). Each node is an artist, and each edge is a collaboration between 2 artists. The nodes' size is proportional to the number of collaborations with different artists (degree) while the edges' thickness is proportional to the number of collaborations between the 2 artists (edge weight).
@@ -33,7 +34,7 @@ An interesting metric to look at is PageRank, the algorithm created by Google to
 Another interesting metric is betweenness centrality which in this case will be artists that are the connection between different groups of artists. The top 3 here are Groove Armada, Gilles Peterson and Nic Fanciulli.
 
 ### clusters
-One of the main things I was hoping to see on the graph was clusters of similar artists and, in a way, representing different styles of music. In the end I was quite happy to see that the graph produced a couple of them. Kudos to Gephi for making it really easy. Large version [here](/img/artist_vis/clusters.png).
+One of the main things I was hoping to see on the graph was clusters of similar artists and, in a way, representing different styles of music. In the end I was quite happy to see that the graph produced a couple of them. Kudos to Gephi for making it really easy. Large version <a href="/img/artist_vis/clusters.png" class="external-link">here</a>.
 <img class="pure-img" src="/img/artist_vis/1024x_clusters.jpg" alt="Clusters" title="Clusters">
 
 Here are some of them in more detail. The Hip Hop and R&B cluster:
@@ -45,7 +46,7 @@ The two rock clusters:
 And the tiny but powerful Bossa Nova cluster. This blob comes mostly from collaborations between Stan Getz, João Gilberto and Astrud Gilberto
 <img class="pure-img" src="/img/artist_vis/1024x_cluster_bossa_nova.jpg" alt="Bossa Nova cluster" title="Bossa Nova cluster">
 
-However the biggest cluster is not so obvious to spot. Looking at the whole graph we can see that green is by far the predominant color and is literally all over the graph. The green cluster is pretty much just electronic music and together with the red and blue clusters, they are responsible for around 40% of the graph. Which is not surprising given the nature of electronic music where it's super common to collaborate with other artists in the form of remixes or compilations / DJ sets. Larger version [here](/img/artist_vis/cluster_electronic_music.png)
+However the biggest cluster is not so obvious to spot. Looking at the whole graph we can see that green is by far the predominant color and is literally all over the graph. The green cluster is pretty much just electronic music and together with the red and blue clusters, they are responsible for around 40% of the graph. Which is not surprising given the nature of electronic music where it's super common to collaborate with other artists in the form of remixes or compilations / DJ sets. Larger version <a href="/img/artist_vis/cluster_electronic_music.png" class="external-link">here</a>
 <img class="pure-img" src="/img/artist_vis/1024x_cluster_electronic_music.jpg" alt="Electronic Music cluster" title="Electronic Music cluster">
 
 methodology
@@ -79,6 +80,6 @@ MATCH (n:Artist)-->(:Track)<--(l:Tracklist) WITH n,l MATCH l-->(:Track)<--(m:Art
 {% endhighlight %}
 
 Which would hopefully return all relationships between artists that were part of the same album or compilation.
-After awhile the query returned with about 1.6 million connections! I loaded it up on Gephi and it produced this (you really should check the large version [here](/img/artist_vis/overview_tracklist_common.png)):
-<img class="pure-img" src="/img/artist_vis/1024x_overview_tracklist_common.jpg" alt="Overview" title="Overview">
+After awhile the query returned with about 1.6 million connections! I loaded it up on Gephi and it produced this (you really should check the large version <a href="/img/artist_vis/overview_tracklist_common.png" class="external-link">here</a>:
+<img class="pure-img" src="/img/artist_vis/1024x_overview_tracklist_common.jpg" alt="Overview Tracklists in Common" title="Overview Tracklists in Common">
 What a beauty...

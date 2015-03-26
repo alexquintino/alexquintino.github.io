@@ -15,5 +15,8 @@
       </article>
     </main>
     {% include footer.html %}
+    {% if page.enable_click_tracking %}
+      <script src="/js/click_tracking.js"></script>
+    {% endif %}
   </body>
 </html>
