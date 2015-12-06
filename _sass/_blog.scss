@@ -46,6 +46,19 @@
   }
 }
 
+.post .slides {
+  .slide {
+    float: left;
+    padding-right: 1rem;
+    max-width: 30rem;
+  }
+
+  p {
+    clear: both;
+    overflow: auto;
+  }
+}
+
 .blog, .post {
   font-size: 1.6em;
   p {
