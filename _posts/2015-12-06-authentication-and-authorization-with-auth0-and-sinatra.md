@@ -6,6 +6,7 @@ description: A quick case study of how Faveeo uses Auth0 for user authentication
 meta_image: /img/auth/auth_1.jpg
 twitter_card: summary_large_image
 article_class: slides
+excerpt: "I recently gave a quick talk called \"Authentication and Authorization with Auth0 and Sinatra: A Case Study\" at Geneva.rb, Geneva's very own Ruby meetup. This post is a text version of that talk."
 ---
 
 ![Slide 1](/img/auth/auth_1.jpg){: .pure-img .slide }
