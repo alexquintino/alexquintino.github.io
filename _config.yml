@@ -2,4 +2,5 @@ exclude: ["alexquintino.github.io.sublime-project", "alexquintino.github.io.subl
 permalink: /blog/:title
 gems:
   - jekyll-sitemap
+  - jekyll-coffeescript
 url: "http://alexquintino.github.io"
