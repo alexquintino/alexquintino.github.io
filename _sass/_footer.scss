@@ -4,6 +4,10 @@ footer {
   @include side-panel($footer-height);
   bottom: 0;
 
+  @media screen and (max-width: $breakpoint-small) {
+    box-shadow: 0 10px 50px 0px black;
+  }
+
   .social-links {
     @media screen and (max-width: $breakpoint-small) { // top/bottom
       text-align: right;

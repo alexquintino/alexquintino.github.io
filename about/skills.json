@@ -2,9 +2,12 @@
   "children": [
     {"name": "Ruby", "value": 3, "type": "language"},
     {"name": "Ruby on Rails", "value": 3, "type": "framework"},
-    {"name": "Apache Spark", "value": 3, "type": "framework"},
-    {"name": "Machine Learning", "value": 3, "type": "tool"},
+    {"name": "Java", "value": 3, "type": "language"},
+    {"name": "Elasticsearch", "value": 3, "type": "tool"},
+    {"name": "AWS", "value": 3, "type": "tool"},
 
+    {"name": "Apache Spark", "value": 2, "type": "framework"},
+    {"name": "Machine Learning", "value": 2, "type": "tool"},
     {"name": "Neo4j", "value": 2, "type": "tool"},
     {"name": "D3.js", "value": 2, "type": "framework"},
     {"name": "Scala", "value": 2, "type": "language"},
@@ -14,10 +17,12 @@
     {"name": "Docker", "value": 2, "type": "tool"},
     {"name": "Gephi", "value": 2, "type": "tool"},
     {"name": "Sinatra", "value": 2, "type": "framework"},
+    {"name": "Auth0", "value": 2, "type": "tool"},
+    {"name": "Angular", "value": 2, "type": "framework"},
+
 
     {"name": "Javascript", "value": 1, "type": "language"},
     {"name": "CoffeeScript", "value": 1, "type": "language"},
-    {"name": "Java", "value": 1, "type": "language"},
     {"name": "SASS", "value": 1, "type": "language"},
     {"name": "CSS", "value": 1, "type": "language"},
     {"name": "GIT", "value": 1, "type": "tool"},
@@ -26,8 +31,12 @@
     {"name": "Pure CSS", "value": 1, "type": "framework"},
     {"name": "Unicorn", "value": 1, "type": "tool"},
     {"name": "Phusion Passenger", "value": 1, "type": "tool"},
-    {"name": "NGINX", "value": 1, "type": "tool"}
-
+    {"name": "NGINX", "value": 1, "type": "tool"},
+    {"name": "Kafka", "value": 1, "type": "tool"},
+    {"name": "RabbitMQ", "value": 1, "type": "tool"},
+    {"name": "Kibana", "value": 1, "type": "tool"},
+    {"name": "Bootstrap", "value": 1, "type": "framework"},
+    {"name": "REST APIs", "value": 1, "type": "framework"}
 
   ]
 }

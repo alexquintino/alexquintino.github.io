@@ -1,8 +1,8 @@
 ---
 ---
 
-width = 500
-height = 450
+width = 600
+height = 600
 color = d3.scale.category20c();
 
 bubble = d3.layout.pack()

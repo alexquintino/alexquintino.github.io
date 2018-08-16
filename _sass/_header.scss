@@ -3,13 +3,19 @@ $max-header-height: 2.5rem;
 $max-header-width: 15rem;
 
 header {
-
   @include side-panel($max-header-height);
   top: 0;
 
+  @media screen and (max-width: $breakpoint-small) {
+    box-shadow: 0 -10px 50px 0px black;
+  }
+
   .logo {
     color: $text-color;
-    margin-bottom: 5rem;
+    @media screen and (min-width: $breakpoint-small) {
+      margin-bottom: 5rem;
+    }
+
     div {
       font-family: 'CODE', sans-serif;
       font-size: 1.5rem;

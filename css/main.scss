@@ -29,8 +29,8 @@ $breakpoint-large: 80em;
   @media screen and (max-width: $breakpoint-small) { // top/bottom
     width: 100%;
     height: $height-mobile;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 

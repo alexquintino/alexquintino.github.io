@@ -32,20 +32,26 @@
     }
   }
 
-  .bubble .skill {
-    font-weight: 400;
-    text-anchor: middle;
-
-    circle.framework {
-      fill: #FF6B6B;
+  #skills {
+    @media screen and (max-width: $breakpoint-small) {
+      overflow-x: scroll;
     }
 
-    circle.language {
-      fill: #4ECDC4;
-    }
+    .bubble .skill {
+      font-weight: 400;
+      text-anchor: middle;
 
-    circle.tool {
-      fill: #C7F464;
+      circle.framework {
+        fill: #FF6B6B;
+      }
+
+      circle.language {
+        fill: #4ECDC4;
+      }
+
+      circle.tool {
+        fill: #C7F464;
+      }
     }
   }
 }
